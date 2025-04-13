@@ -35,3 +35,9 @@ jobs:
   
     - name: Export coverage data as LCOV
       run: coverage lcov -o coverage.lcov
+    
+    - name: Upload coverage data to Qlty Cloud
+      uses: qltysh/qlty-action/coverage@main
+      with:
+        oidc: true
+        files: coverage.lcov
