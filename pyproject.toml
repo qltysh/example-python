@@ -1,4 +1,0 @@
-[tool.coverage.run]
-omit = [
-    "tests/*",
-]
