@@ -40,4 +40,4 @@ jobs:
       uses: qltysh/qlty-action/coverage@main
       with:
         oidc: true
-        files: coverage.lcov
+        files: lcov:coverage.lcov
