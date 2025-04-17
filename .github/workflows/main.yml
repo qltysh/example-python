@@ -37,7 +37,7 @@ jobs:
       run: coverage lcov -o coverage.lcov
     
     - name: Upload coverage data to Qlty Cloud
-      uses: qltysh/qlty-action/coverage@main
+      uses: qltysh/qlty-action/coverage@v1
       with:
         oidc: true
         files: lcov:coverage.lcov
