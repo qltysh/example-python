@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.4.0
 
       - name: Set up Python 3.10
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v3.1.4
         with:
           python-version: "3.10"
 
@@ -34,7 +34,7 @@ jobs:
         run: coverage lcov -o coverage.lcov
 
       - name: Upload coverage data to Qlty Cloud
-        uses: qltysh/qlty-action/coverage@b413a89d8f3a8b36b9edd20b7ef1ad7ae0a7ac3a # version 2.2.2
+        uses: qltysh/qlty-action/coverage@v2.2.2
         with:
           oidc: true
           files: lcov:coverage.lcov
